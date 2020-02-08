@@ -275,7 +275,7 @@ function processMessage(obj) {
           reporter.success();
         }
       }
-      if (applyUpdate) {
+      if (applyUpdate && obj.action === "built") {
         processUpdate(obj.hash, obj.modules, options);
       }
       break;
